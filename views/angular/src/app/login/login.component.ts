@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
 import { ApiService } from "./../core/http/api.service";
+import {MatSnackBar} from '@angular/material';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     secondFormGroup: FormGroup;
     thirdFormGroup: FormGroup;
     signatureChercheur: any
-    constructor(private _formBuilder: FormBuilder, public ApiService: ApiService) { }
+    constructor(private _formBuilder: FormBuilder, public ApiService: ApiService,private snackBar: MatSnackBar) { }
 
     ngOnInit() {
         this.firstFormGroup = this._formBuilder.group({
@@ -65,8 +66,11 @@ export class LoginComponent implements OnInit {
         
         var chercheurRequestBody = Object.assign({}, this.firstFormGroup.value, this.secondFormGroup.value, this.thirdFormGroup.value);
         this.ApiService.register(chercheurRequestBody).then(data=>{
-
-        })
+            this.snackBar.open("Votre candidature a été retenue consulter votre boite mail","Done", {
+                duration: 5000,
+              });
+            }
+        )
     }
 
     ngAfterViewInit() {

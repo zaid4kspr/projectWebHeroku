@@ -14,7 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import { SignaturePadModule } from 'angular2-signaturepad';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ApiService } from "./core/http/api.service";
 @NgModule({
@@ -37,7 +37,8 @@ import { ApiService } from "./core/http/api.service";
     MatIconModule,
     MatCheckboxModule,
     MatRadioModule,
-    SignaturePadModule
+    SignaturePadModule,
+    MatSnackBarModule
  
   ],
   providers: [ApiService ],
