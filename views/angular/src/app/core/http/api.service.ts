@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 
 
 const routes = {
-  api: 'https://laboratoiredrechercheproject.herokuapp.com/'
+  api: 'https://laboratoiredrechercheproject.herokuapp.com/api/'
 
 
 };
