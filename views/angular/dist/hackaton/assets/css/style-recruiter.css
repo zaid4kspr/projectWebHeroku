@@ -1,0 +1,124 @@
+body {
+  padding-top: 25px !important;
+}
+.content__title {
+  margin: 0 auto;
+  font-size: 1em;
+  z-index: 100;
+  position: relative;
+  color: #fff;
+  font-family: Nexa;
+  letter-spacing: 2px;
+  text-align: left;
+  padding-left: 30px;
+}
+.content__title .logo {
+  border-radius: 99px;
+  width: 50px;
+  margin-right: 10px;
+}
+.manage-posts .container {
+  width: 90%;
+  padding: 35px;
+}
+.manage-posts .container .signup-content {
+  padding: 35px;
+}
+.form-title {
+  text-align: left;
+}
+
+.posts-list {
+  padding: 0px;
+}
+.posts-list li {
+  position: relative;
+  padding: 0px 10px;
+  list-style: none;
+  height: 70px;
+  margin: 10px 0px;
+  box-shadow: 0px 0px 12px 0px #0000001a;
+  border-radius: 6px;
+}
+.posts-list li p {
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+.posts-list li p a {
+  text-decoration: none;
+  color: #983367;
+  display: block;
+  font-size: 14px;
+}
+.posts-list li.unactive {
+  opacity: 0.5;
+}
+.info-card {
+  height: 150px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px #0000001a;
+  margin-bottom: 50px;
+}
+.developer-card {
+  text-align: center;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px #0000001a;
+}
+.info-details li {
+  list-style: none;
+  display: inline-block;
+  line-height: 70px;
+  width: 32.333%;
+}
+
+.info-details li h3 {
+  font-size: 14px;
+}
+.info-details li p {
+  font-size: 12px;
+}
+.next-candidats {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #2c2870;
+  color: #fff;
+  box-shadow: -2px 2px 5px 0px #27246380;
+}
+.top-rated {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #762f6a;
+  color: #762f6a;
+  padding: 5px 0px;
+  border-radius: 99px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0px auto;
+  border-radius: 99px;
+}
+.select-candidat input {
+  margin-top: 10px;
+  width: 80% !important;
+  font-size: 12px !important;
+  padding: 5px !important;
+}
+.opacity-light {
+  opacity: 0.7;
+}
+.opacity-super-light {
+  opacity: 0.3;
+}

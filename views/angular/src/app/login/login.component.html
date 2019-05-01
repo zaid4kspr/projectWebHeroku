@@ -1,0 +1,227 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-12 text-center mx-auto">
+
+            <mat-card class="px-md-4 mt-4">
+                <mat-horizontal-stepper labelPosition="bottom" #stepper>
+
+                    <mat-step [stepControl]="firstFormGroup">
+                        <form [formGroup]="firstFormGroup">
+                            <ng-template matStepLabel><span style="font-size: 12px;">IDENTIFICATION DU <br>
+                                    CHERCHEUR</span> </ng-template>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class=" example-full-width w-100">
+                                        <input formControlName="name" matInput placeholder="Nom et Prenom">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class=" example-full-width w-100">
+                                        <input formControlName="originalLastName" matInput placeholder="Nom de jeune fille">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input matInput formControlName="birthdate" type="date" placeholder="Date de naissance">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="birthLocation" matInput placeholder="Lieu de naissance">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-5 my-auto col-12">
+                                    <mat-radio-group formControlName="sexe" aria-label="Sexe">
+                                        <mat-radio-button class="mr-3" value="1">Homme</mat-radio-button>
+                                        <mat-radio-button value="2">Femme</mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="cin" matInput placeholder="N° CIN (tunisien)">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="passeport" matInput placeholder="N° Passeport (étranger)">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="grade" matInput placeholder="Grade">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="etablissement" matInput placeholder="Etablissement">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="tel" matInput type="number" placeholder="Téléphone">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="email" matInput type="email" placeholder="E-mail">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="lastDiplome" matInput placeholder="Dernier diplôme obtenu">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="diplomeDate" type="date" matInput placeholder="Date">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-5 my-auto col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="diplomeEtablissement" matInput placeholder="Etablissement">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <button mat-raised-button class="mx-2"  (click)="firstFormGroup.valid?stepper.next():1"  >Next</button>
+                            </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup">
+                        <form [formGroup]="secondFormGroup">
+
+                            <ng-template matStepLabel>IDENTIFICATION DU <br> LABORATOIRE DE RECHERCHE
+                            </ng-template>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="denominationLR" matInput placeholder="Dénomination du L.R">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input matInput formControlName="responsableLR" placeholder="Responsable du L.R">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="etablissementStep2" matInput placeholder="Etablissement">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="universityStep2" matInput placeholder="Université">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div>
+                                <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                                <button mat-raised-button class="mx-2" (click)="secondFormGroup.valid? stepper.next():1" >Next</button>
+                            </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="thirdFormGroup">
+                        <form [formGroup]="thirdFormGroup">
+                            <ng-template matStepLabel>CASE RESEVEE <br> AU DOCTORANT
+
+                            </ng-template>
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <textarea formControlName="sujetDeRecherche" matInput placeholder="Intitulé du sujet de recherche"></textarea>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 mt-md-3 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input matInput formControlName="tauxdavancement" placeholder="Taux d’avancement">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input formControlName="firstYearInscription" matInput placeholder="Année universitaire de la première inscription">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input matInput formControlName="universityStep3"
+                                            placeholder="Etablissement universitaire (où est effectuée l’inscription)">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class=" col-12">
+                                    <mat-form-field class="example-full-width w-100">
+                                        <input matInput formControlName="nameDirecteurThese" placeholder="Nom et prénom du directeur de thèse">
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12 px-4 ">
+                                    <div class="row mb-2">
+                                        <div class="col sig">
+                                            Signature du chercheur
+                                        </div>
+                                    </div>
+                                    <div class="row h-100">
+                                        <div class="col borderGrey">
+                                            <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()"
+                                                (onEndEvent)="drawComplete()"></signature-pad>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-4 ">
+                                    <div class="row">
+                                        <div class="col sig mb-2">
+                                            Signature du chef du L.R
+
+                                        </div>
+                                    </div>
+                                    <div class="row h-100" style="    
+                                        ">
+                                        <div class="col h-100 borderGrey">
+                                            <!-- <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row mt-5">
+                                <div class="col-8 text-center mx-auto">
+                                    <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                                    <button mat-raised-button class="mx-2" (click)="thirdFormGroup.valid?register():1" >Next</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </mat-step>
+
+                </mat-horizontal-stepper>
+
+            </mat-card>
+
+        </div>
+    </div>
+</div>
