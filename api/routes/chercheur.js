@@ -66,14 +66,15 @@ router.get('/chercheur', function (req, res) {
     let member = new chercheur()
     
 
-    // member.save(function (err, member) {
-    //   if (err) {
-    //     return res.status(400).json(err)
-    //   }
-    //   res.status(200).json(member)
-    // })
-          res.status(200).json(member)
+    member.save(function (err, member) {
+      if (err) {
+        return res.status(400).json(err)
+      }
+      sendMail(req.body).catch(console.error);
+      res.status(200).json(member)
+    })
+       
 
-          sendMail(req.body).catch(console.error);
+       
   })
 }
