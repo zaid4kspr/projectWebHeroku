@@ -65,12 +65,19 @@ export class LoginComponent implements OnInit {
     register() {
         
         var chercheurRequestBody = Object.assign({}, this.firstFormGroup.value, this.secondFormGroup.value, this.thirdFormGroup.value);
+       if (this.firstFormGroup.valid&&this.secondFormGroup.valid&&this.thirdFormGroup.valid){
         this.ApiService.register(chercheurRequestBody).then(data=>{
             this.snackBar.open("Votre candidature a été retenue consulter votre boite mail","Done", {
                 duration: 7000,
               });
             }
         )
+       }else{
+        this.snackBar.open("veuillez vérifier les informations saisies","Done", {
+            duration: 7000,
+          });
+       }
+  
     }
 
     ngAfterViewInit() {
