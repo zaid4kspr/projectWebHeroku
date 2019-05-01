@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
         var chercheurRequestBody = Object.assign({}, this.firstFormGroup.value, this.secondFormGroup.value, this.thirdFormGroup.value);
         this.ApiService.register(chercheurRequestBody).then(data=>{
             this.snackBar.open("Votre candidature a été retenue consulter votre boite mail","Done", {
-                duration: 5000,
+                duration: 7000,
               });
             }
         )
